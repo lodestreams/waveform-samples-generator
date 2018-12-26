@@ -16,10 +16,15 @@ export const download = async (url: string) => {
   shell.mkdir("-p", dir);
   const downloadToFile = `${dir}/${extractFilename(url)}`;
   const response = await Axios({ url, responseType: "stream" });
-  const fileStream = fs.createWriteStream(downloadToFile);
-  response.data.pipe(fileStream);
 
-  return new Promise<IDownloadReturn>(resolve => {
+  return new Promise<IDownloadReturn>((resolve, reject) => {
+    if (!`${response.status}`.startsWith("2")) {
+      reject(`Failed to download audio file: ${response.status} ${url}`);
+    }
+
+    const fileStream = fs.createWriteStream(downloadToFile);
+    response.data.pipe(fileStream);
+
     fileStream.on("close", () => {
       debug("File saved to", downloadToFile);
       resolve({

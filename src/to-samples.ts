@@ -15,5 +15,6 @@ export function toSamples(
   execSync(cmd);
 
   const samples = fs.readFileSync(outputDatFile);
+  shell.rm("-rf", outputDatLoc);
   return toArrayBuffer(samples);
 }

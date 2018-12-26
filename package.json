@@ -15,7 +15,9 @@
     "prepublish": "yarn clean && yarn build && yarn test"
   },
   "dependencies": {
+    "@types/debug": "^0.0.31",
     "axios": "^0.18.0",
+    "debug": "^4.1.1",
     "lodash": "^4.17.11",
     "shelljs": "^0.8.3",
     "to-arraybuffer": "^1.0.1",
@@ -27,8 +29,8 @@
     "@types/lodash": "^4.14.119",
     "@types/node": "^10.12.18",
     "@types/shelljs": "^0.8.1",
-    "rimraf": "^2.6.2",
     "jest": "^23.6.0",
+    "rimraf": "^2.6.2",
     "ts-jest": "^23.10.5"
   }
 }

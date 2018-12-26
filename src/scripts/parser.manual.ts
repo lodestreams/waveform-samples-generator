@@ -11,7 +11,6 @@ import { parseFile } from "../parser";
   if (`${process.argv[2]}`.startsWith("http")) {
     url = process.argv[2];
   }
-
   const waveform = await parseFile({ url, sampleRate: 10 });
   console.log(JSON.stringify(Array.from(waveform.max)));
 })();

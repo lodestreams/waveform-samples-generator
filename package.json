@@ -15,10 +15,12 @@
     "prepublish": "yarn clean && yarn build && yarn test"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "@types/jest": "^23.3.10",
     "@types/lodash": "^4.14.119",
     "@types/node": "^10.12.18",
     "@types/shelljs": "^0.8.1",
+    "axios": "^0.18.0",
     "jest": "^23.6.0",
     "lodash": "^4.17.11",
     "rimraf": "^2.6.2",

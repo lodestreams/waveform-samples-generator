@@ -12,7 +12,7 @@
     "build": "tsc",
     "test": "node_modules/.bin/jest",
     "clean": "rimraf lib",
-    "prepublish": "yarn clean && yarn build"
+    "prepublish": "yarn clean && yarn build && yarn test"
   },
   "dependencies": {
     "@types/jest": "^23.3.10",

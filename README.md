@@ -21,3 +21,5 @@ If you want more features or generate them on your own, just use the original [a
   // Or render it
   console.log(samples)
   ```
+
+  If your want to draw waveforms out of it, use `samples.max`, it's an array of points.

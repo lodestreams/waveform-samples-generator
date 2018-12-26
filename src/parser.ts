@@ -9,7 +9,10 @@ export interface IParseFileParam {
   sampleRate?: number;
 }
 
-export const parseFile = ({ filePath, sampleRate }: IParseFileParam) => {
+export const parseFile = ({
+  filePath,
+  sampleRate
+}: IParseFileParam): WaveformDataNew => {
   const audioSupported =
     FORMATS.filter(f => filePath.toLowerCase().endsWith(`.${f}`)).length > 0;
 

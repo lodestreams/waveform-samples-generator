@@ -4,10 +4,19 @@ import toArrayBuffer from "to-arraybuffer";
 import { execSync } from "child_process";
 import { getTmpDir } from "./utils/tmp-dir";
 
+export function testBin() {
+  const result = shell.which("audiowaveform");
+  return !!(result && result.code === 0);
+}
+
 export function toSamples(
   inFile: string,
   sampleRate: number = 10
 ): ArrayBuffer {
+  if (!testBin()) {
+    throw new Error("audiowaveform is not included in $PATH");
+  }
+
   const outputDatLoc = getTmpDir();
   const outputDatFile = `${outputDatLoc}/audio.dat`;
   shell.mkdir("-p", outputDatLoc);

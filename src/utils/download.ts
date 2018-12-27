@@ -1,5 +1,6 @@
 // import Axios from "axios";
 import _debug from "debug";
+import encodeurl from "encodeurl";
 import * as fs from "fs";
 import * as shell from "shelljs";
 // import * as request from "request";
@@ -20,7 +21,7 @@ export const download = async (url: string, dest?: string) => {
   var out = fs.createWriteStream(dest);
   return new Promise<IDownloadReturn>((resolve, reject) => {
     return needle
-      .get(url)
+      .get(encodeurl(url))
       .pipe(out)
       .on("finish", function(err) {
         if (err) {
@@ -34,6 +35,10 @@ export const download = async (url: string, dest?: string) => {
             shell.rm("-rf", dir);
           }
         });
+      })
+      .on("error", function(err) {
+        console.log("error!", err);
+        reject(err);
       });
   });
 };

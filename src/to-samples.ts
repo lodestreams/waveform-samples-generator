@@ -14,7 +14,7 @@ export function toSamples(
   sampleRate: number = 10
 ): ArrayBuffer {
   if (!testBin()) {
-    throw new Error("audiowaveform is not included in $PATH");
+    throw new Error("audiowaveform is not installed");
   }
 
   const outputDatLoc = getTmpDir();

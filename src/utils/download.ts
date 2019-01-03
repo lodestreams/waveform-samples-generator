@@ -27,17 +27,17 @@ export const download = async (url: string, dest?: string) => {
         if (err) {
           return reject(err);
         }
-        console.log("File downloaded to", dest);
+        debug("File downloaded to %s", dest);
         return resolve({
           path: dest,
           clean: () => {
-            console.log("rm -rf", dir);
+            debug("rm -rf %s", dir);
             shell.rm("-rf", dir);
           }
         });
       })
       .on("error", function(err) {
-        console.log("error!", err);
+        debug("error! %o", err);
         reject(err);
       });
   });

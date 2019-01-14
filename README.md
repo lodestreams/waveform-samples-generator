@@ -10,7 +10,7 @@ If you want more features or generate them on your own, just use the original [a
 2. Install this module:
 
   ```bash
-  npm install waveform-samples-generator
+  npm install @lodestream/waveform-samples-generator
   ```
 
 3. Use it like this:

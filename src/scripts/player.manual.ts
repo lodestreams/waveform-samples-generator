@@ -7,7 +7,7 @@ import { printBlocks } from "../utils/print-blocks";
     url = process.argv[2];
   } else {
     url =
-      "https://cdn.jsdelivr.net/gh/lodestreams/waveform-samples-generator@master/docs/test.mp3";
+      "https://cdn.jsdelivr.net/gh/lodestreams/waveform-samples-generator@2254b8235c0cd82a482fb2bf7b7404c8fb0df560/docs/test.mp3";
   }
   const waveform = await parseFile({ url });
 

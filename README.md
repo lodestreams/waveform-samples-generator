@@ -21,7 +21,7 @@ If you want more features or generate them on your own, just use the original [a
   const start = async () => {
     const samples = await parseFile({ 
       // filePath: "./audio.mp3",
-      // url: "https://cdn.jsdelivr.net/gh/lodestreams/waveform-samples-generator@master/docs/1min.mp3"
+      url: "https://cdn.jsdelivr.net/gh/lodestreams/waveform-samples-generator@master/docs/1min.mp3"
       sampleRate: 10
     });
     // See /src/@types/waveform-data/index.d.ts for detailed schema of `samples`

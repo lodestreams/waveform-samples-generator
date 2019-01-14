@@ -32,3 +32,18 @@ If you want more features or generate them on your own, just use the original [a
   ```
 
   If your want to draw waveforms out of it, use `samples.max`, it's an array of points.
+
+## Play with this repo
+
+Print out samples (array):
+
+```bash
+ts-node --files src/scripts/parser.manual.ts
+# [2,2,2,3,2,2,3,2,3,2,3,3,3,5,4,4,4,2,...
+```
+
+Play the waveform! Watch it dancing!
+
+```bash
+ts-node --files src/scripts/player.manual.ts
+```

@@ -5,6 +5,7 @@
     "encodeurl",
     "flac",
     "lodestream",
+    "repo",
     "resample",
     "stringify",
     "tempdir"

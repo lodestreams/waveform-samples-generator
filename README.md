@@ -10,16 +10,25 @@ If you want more features or generate them on your own, just use the original [a
 2. Install this module:
 
   ```bash
-  npm install waveform-samples-generator
+  npm install @lodestream/waveform-samples-generator
   ```
 
 3. Use it like this:
 
-  ```typescript
-  import { parseFile } from "waveform-samples-generator";
-  const samples = parseFile({ filePath: "/path/to/your/audio", sampleRate: 10 });
-  // Or render it
-  console.log(samples)
+  ```js
+  const { parseFile } = require("../lib");
+
+  const start = async () => {
+    const samples = await parseFile({ 
+      filePath: 'audio.mp3',
+      // url: '...'
+      sampleRate: 10
+    });
+    // See /src/@types/waveform-data/index.d.ts for detailed schema of `samples`
+    console.log(JSON.stringify(samples.max));
+  };
+
+  start();
   ```
 
   If your want to draw waveforms out of it, use `samples.max`, it's an array of points.

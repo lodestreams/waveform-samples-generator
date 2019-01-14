@@ -6,6 +6,7 @@
     "flac",
     "lodestream",
     "resample",
+    "stringify",
     "tempdir"
   ]
 }

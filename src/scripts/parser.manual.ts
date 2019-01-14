@@ -2,12 +2,12 @@ import { parseFile } from "../parser";
 
 /**
  * ```shell
- * node lib/scripts/parser.manual.js https://cdn.jsdelivr.net/gh/lodestreams/waveform-samples-generator@master/docs/1min.mp3
+ * node lib/scripts/parser.manual.js https://cdn.jsdelivr.net/gh/lodestreams/waveform-samples-generator@master/docs/test.mp3
  * ```
  */
 (async () => {
   let url =
-    "https://cdn.jsdelivr.net/gh/lodestreams/waveform-samples-generator@master/docs/1min.mp3";
+    "https://cdn.jsdelivr.net/gh/lodestreams/waveform-samples-generator@master/docs/test.mp3";
   if (`${process.argv[2]}`.startsWith("http")) {
     url = process.argv[2];
   }

@@ -1,4 +1,4 @@
-# Waveform Samples Generator
+# Waveform Samples Generator [![Build Status](https://travis-ci.org/lodestreams/waveform-samples-generator.svg?branch=master)](https://travis-ci.org/lodestreams/waveform-samples-generator)
 
 This is a thin wrapper around [audiowaveform](https://github.com/bbc/audiowaveform) to parse audio files and generate sample data.
 
